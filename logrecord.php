@@ -68,12 +68,10 @@ $now = getdate();
 #fwrite($fp, $_SERVER['QUERY_STRING'] . "\n");
 
 $dbsettings = parse_ini_file("../../leafspy.ini");
-
-#$mysqli = new mysqli("mysql.thestidhams.com", "leaf_user", "7Ms%n2I#BoZT", "leaf_spy");
 $mysqli = new mysqli($dbsettings['server'], $dbsettings['login'], $dbsettings['password'], $dbsettings['database']);
 if($mysqli->connect_errno) {
 	$fp = fopen('../drivelog.csv', 'a');
-	fwrite($fp, "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "\n");
+	fwrite($fp, "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . PHP_EOL);
 	fclose($fp);
 }
 
