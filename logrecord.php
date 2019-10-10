@@ -48,15 +48,15 @@ $PwrSw = $_REQUEST['PwrSw'];
 $Tunits = $_REQUEST['Tunits'];
 $RPM = $_REQUEST['RPM'];
 
-$sendUrl = sprintf('http://api.myevstats.com?user=%s&pass=%s&DevBat=%s&Gids=%s&Lat=%s&Long=%s&Elv=%s&Seq=%s&Trip=%s&Odo=%s&SOC=%s&AHr=%s&BatTemp=%s&Amb=%s&Wpr=%s&PlugState=%s&ChrgMode=%s&ChrgPwr=%s&VIN=%s&PwrSw=%s&Tunits=%s&RPM=%s',
-$user, $pass, $DevBat, $Gids, '0', '0', '0', $Seq, $Trip, $Odo, $SOC, $AHr, $BatTemp, $Amb, $Wpr, $PlugState, $ChrgMode, $ChrgPwr, $VIN, $PwrSw, $Tunits, $RPM);
+#$sendUrl = sprintf('http://api.myevstats.com?user=%s&pass=%s&DevBat=%s&Gids=%s&Lat=%s&Long=%s&Elv=%s&Seq=%s&Trip=%s&Odo=%s&SOC=%s&AHr=%s&BatTemp=%s&Amb=%s&Wpr=%s&PlugState=%s&ChrgMode=%s&ChrgPwr=%s&VIN=%s&PwrSw=%s&Tunits=%s&RPM=%s',
+#$user, 'password', $DevBat, $Gids, '0', '0', '0', $Seq, $Trip, $Odo, $SOC, $AHr, $BatTemp, $Amb, $Wpr, $PlugState, $ChrgMode, $ChrgPwr, $VIN, $PwrSw, $Tunits, $RPM);
 
-$ch = curl_init($sendUrl);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HEADER, 0);
+#$ch = curl_init($sendUrl);
+#curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+#curl_setopt($ch, CURLOPT_HEADER, 0);
 
-curl_exec($ch);
-curl_close($ch);
+#curl_exec($ch);
+#curl_close($ch);
 
 $now = getdate();
 
